@@ -1,1 +1,216 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noelia Rozado | Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #fdf0f0, #fff9e6);
+      padding: 2.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    nav {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.3rem;
+      color: #222;
+    }
+
+    .project-card {
+      background: #fafafa;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .project-card h3 {
+      margin-top: 0.8rem;
+      color: #0077cc;
+    }
+
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills li {
+      background: #eee;
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+      background: #fdfdfd;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://avatars.githubusercontent.com/u/113633117?v=4" alt="Noelia Rozado">
+    <h1>Noelia Rozado</h1>
+    <p>Junior Developer with a strong background in Education, Psychology, and HR</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I have a Bachelor's in Teaching, another in Psychology, and a Master's in Human Resources. I recently completed a degree in software development (“Grado Superior en Desarrollo de Aplicaciones Multiplataforma”). My unique mix of tech and human-focused studies helps me create applications that are useful, empathetic, and meaningful.
+        <br><br>
+        I’m looking for my first job as a developer and eager to bring value with a user-centered approach.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project-card">
+        <img src="https://raw.githubusercontent.com/noeliarozado/EmocionaAppREADME/main/images/emociona1.png" alt="Emociona App Screenshot">
+        <h3><a href="https://github.com/noeliarozado/EmocionaAppREADME" target="_blank">EmocionaApp</a></h3>
+        <p>
+          An educational mobile app that helps children recognize and express emotions through fun activities. Designed with emotional intelligence in mind.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <img src="https://raw.githubusercontent.com/noeliarozado/SmartwatchAppREADME/main/images/smartwatch1.png" alt="Smartwatch App Screenshot">
+        <h3><a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">Smartwatch Fitness App</a></h3>
+        <p>
+          A health-tracking smartwatch app focused on motivation and usability, based on psychological principles of behavior change.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <img src="https://img.itch.zone/aW1hZ2UvMjEzMTAxMi8xMjQ4MjkzOC5naWY=/original/G0LgQJ.gif" alt="Fortune Smash Game">
+        <h3><a href="https://apiratehat.itch.io/fortune-smash" target="_blank">Fortune Smash</a></h3>
+        <p>
+          A fast-paced 2D arcade-style game developed with a friend during a game jam. Playable online on Itch.io!
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Java</li>
+        <li>Kotlin</li>
+        <li>Android Studio</li>
+        <li>MySQL</li>
+        <li>HTML & CSS</li>
+        <li>Git & GitHub</li>
+        <li>UX thinking</li>
+        <li>Empathy</li>
+        <li>Fluent English 🇬🇧</li>
+        <li>Spanish Native 🇪🇸</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: your-email@example.com</p>
+      <p>GitHub: <a href="https://github.com/noeliarozado" target="_blank">noeliarozado</a></p>
+    </section>
+  </div>
+
+  <footer>
+    © 2024 Noelia Rozado • All rights reserved
+  </footer>
+</body>
+</html>
