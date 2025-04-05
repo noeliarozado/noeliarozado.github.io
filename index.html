@@ -80,7 +80,6 @@
       padding-bottom: 0.5rem;
     }
 
-    /* About Section */
     #about p {
       text-align: justify;
       font-size: 1.05rem;
@@ -136,8 +135,12 @@
       margin-bottom: 1.5rem;
     }
 
+    .project-card .card-button {
+      display: flex;
+      justify-content: center;
+    }
+
     .project-card a {
-      display: inline-block;
       text-align: center;
       background-color: #0077cc;
       color: white;
@@ -154,12 +157,6 @@
     }
 
     /* Skills Section */
-    .skills {
-      background-color: #eef7fb;
-      padding: 2rem;
-      border-radius: 10px;
-    }
-
     .skills-categories {
       display: flex;
       flex-direction: column;
@@ -194,18 +191,13 @@
 
     /* CV Section */
     #cv a {
+      color: #0077cc;
       text-decoration: none;
-      background-color: #0077cc;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 20px;
-      font-size: 0.95rem;
-      display: inline-block;
-      margin-top: 1rem;
+      font-size: 1rem;
     }
 
     #cv a:hover {
-      background-color: #005fa3;
+      text-decoration: underline;
     }
 
     /* Contact */
@@ -226,7 +218,6 @@
       color: white;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       nav {
         font-size: 0.95rem;
@@ -282,21 +273,27 @@
           <h3>🎭 EmocionaApp</h3>
           <img src="images/emociona.png" alt="Emociona App">
           <p>A mobile app to record emotions, track causes, and suggest self-regulation activities. Includes PDF reports, scientifically-backed techniques, and gamification with mini-games like “El jardín encantado”. Built in Android Studio with focus on emotional well-being and daily engagement.</p>
-          <a href="https://github.com/noeliarozado/EmocionaAppREADME" target="_blank">🔗 View on GitHub</a>
+          <div class="card-button">
+            <a href="https://github.com/noeliarozado/EmocionaAppREADME" target="_blank">🔗 View on GitHub</a>
+          </div>
         </div>
 
         <div class="project-card">
           <h3>⌚ HealthPulse</h3>
           <img src="images/smartwatch.png" alt="Smartwatch App">
           <p>A smartwatch app built with Ionic to track steps, calories, heart rate, oxygen saturation, and location. Real-time data and daily min/max summaries help users monitor their health at a glance, with a clean UI focused on simplicity and daily usability.</p>
-          <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
+          <div class="card-button">
+            <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
+          </div>
         </div>
 
         <div class="project-card">
           <h3>🥠 Fortune Smash</h3>
           <img src="images/fortune-smash.png" alt="Fortune Smash">
           <p>A colorful, playful game jam project where players smash cookies to reveal fortunes. Fast-paced, arcade-style mechanics with an emphasis on fun and creativity. Created with a focus on collaborative design and high replayability.</p>
-          <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
+          <div class="card-button">
+            <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
+          </div>
         </div>
 
       </div>
@@ -341,8 +338,7 @@
 
     <section id="cv">
       <h2>📄 CV</h2>
-      <p>You can view or download my resume below:</p>
-      <a href="path_to_your_cv.pdf" target="_blank">🔗 View CV</a>
+      <p>You can view or download my resume here: <a href="path_to_your_cv.pdf" target="_blank">🔗 View CV</a></p>
     </section>
 
     <section id="contact">
