@@ -86,10 +86,11 @@
     }
 
     .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      justify-content: space-between;
       gap: 2rem;
-      padding: 2rem;
+      padding: 2rem 0;
+      flex-wrap: wrap;
     }
 
     .project-card {
@@ -98,10 +99,7 @@
       padding: 1.5rem;
       box-shadow: 0 6px 16px rgba(0,0,0,0.06);
       transition: transform 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
+      flex: 1 1 30%; /* Ensures each card takes up around 30% of the space */
       text-align: center;
     }
 
@@ -114,7 +112,6 @@
       height: auto;
       object-fit: contain;
       margin-bottom: 1rem;
-      max-width: 100%;
     }
 
     .project-card h3 {
@@ -147,20 +144,20 @@
 
     /* Custom image sizes for each project */
     .emociona-img {
-      width: 307px;
-      height: 111px;
+      width: 250px;
+      height: 90px;
       object-fit: contain;
     }
 
     .smartwatch-img {
-      width: 378px;
-      height: 300px;
+      width: 250px;
+      height: 200px;
       object-fit: contain;
     }
 
     .fortune-smash-img {
-      width: 315px;
-      height: 250px;
+      width: 210px;
+      height: 170px;
       object-fit: contain;
     }
   </style>
@@ -265,4 +262,3 @@
   </footer>
 </body>
 </html>
-
