@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,48 +86,110 @@
       color: #222;
     }
 
-    .skills ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      list-style: none;
-      padding: 0;
+    /* Project Images Section */
+    .project-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
-    .skills-category {
+    .project-images img {
+      width: 100%;
+      max-width: 250px; /* Keep the previous image size for the top images */
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Project Cards Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .project-card {
+      background: #fafafa;
+      border-radius: 10px;
+      padding: 1.5rem;
       margin-bottom: 2rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+      width: 100%;
+      max-width: 350px;
+      position: relative; /* To ensure images appear inside the card */
+      overflow: hidden;  /* Prevents image overflow */
     }
 
-    .skills-category h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      color: #333;
+    .project-card:hover {
+      transform: translateY(-5px);
     }
 
-    .skills li {
-      padding: 0.6rem 1rem;
-      border-radius: 20px;
-      font-size: 1rem;
-      color: #fff;
-      width: fit-content;
+    .project-card h3 {
+      margin-top: 0.8rem;
+      color: #0077cc;
     }
 
-    .technical {
-      background-color: #0077cc; /* Blue for technical skills */
+    /* Justifying the text inside cards */
+    .project-card p {
+      text-align: justify;
     }
 
-    .soft {
-      background-color: #8eec8e; /* Green for soft skills */
+    /* Adjusting images inside cards */
+    .project-card img {
+      width: 100%;
+      height: auto;
+      max-width: 260px; /* Adjusting image size to be slightly larger */
+      margin-bottom: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; /* Centers the image */
     }
 
-    .language {
-      background-color: #6a5acd; /* Purple for language skills */
-    }
+  .skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
 
-    .skills li:hover {
-      background-color: #555;
-      transition: background-color 0.3s ease;
-    }
+.skills-category {
+  margin-bottom: 2rem;
+}
+
+.skills-category h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.skills li {
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: #fff;
+  width: fit-content;
+}
+
+.technical {
+  background-color: #0077cc; /* Blue for technical skills */
+}
+
+.soft {
+  background-color: #8eec8e; /* Green for soft skills */
+}
+
+.language {
+  background-color: #6a5acd; /* Purple for language skills */
+}
+
+.skills li:hover {
+  background-color: #555;
+  transition: background-color 0.3s ease;
+}
+
 
     footer {
       text-align: center;
@@ -155,7 +218,6 @@
   </nav>
 
   <div class="container">
-    <!-- About Section -->
     <section id="about">
       <h2>About Me</h2>
       <p>
@@ -165,9 +227,9 @@
       </p>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
       <h2>💻 Projects</h2>
+
       <!-- Project Images Section -->
       <div class="project-images">
         <img src="images/emociona.png" alt="EmocionaApp Image" />
@@ -180,55 +242,74 @@
         <div class="project-card">
           <h3>🎭 EmocionaApp</h3>
           <img src="images/emociona.png" alt="EmocionaApp Image" />
-          <p>Users can record their emotions daily, noting the causes behind them. This helps track emotional patterns and fosters self-awareness...</p>
+          <p>Users can record their emotions daily, noting the causes behind them. This helps track emotional patterns and fosters self-awareness. Based on the logged emotion, the app suggests an activity for the day to improve emotional regulation. 
+            The app provides scientifically-backed self-regulation activities, including:</p>
+          <ul>
+            <li>🌱 Breathing exercises</li>
+            <li>🧘 Progressive muscle relaxation</li>
+            <li>🧘 Body scan</li>
+            <li>🧘 Mindfulness meditation</li>
+            <li>🧘 Daily mindfulness practices</li>
+          </ul>
           <a href="https://github.com/noeliarozado/EmocionaAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
-        <!-- More project cards... -->
-      </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <div class="skills-categories">
-        <div class="skills-category">
-          <h3>Technical Skills</h3>
-          <ul>
-            <li class="technical">Java</li>
-            <li class="technical">Kotlin</li>
-            <li class="technical">Android Studio</li>
-            <li class="technical">MySQL</li>
-            <li class="technical">HTML & CSS</li>
-            <li class="technical">Git & GitHub</li>
-          </ul>
+        <div class="project-card">
+          <h3>⌚ Smartwatch App</h3>
+          <img src="images/smartwatch.png" alt="Smartwatch App Image" />
+          <p>A smartwatch app designed to track and display health and fitness data in real time. The app offers users insights into their steps, calories burned, and key health metrics such as heart rate, blood pressure, and oxygen saturation. By displaying the current values as well as the highest and lowest readings of the day, users can easily monitor their health status. Additionally, the app integrates location tracking, allowing users to view their current location on a map.</p>
+          <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
 
-        <div class="skills-category">
-          <h3>Soft Skills</h3>
-          <ul>
-            <li class="soft">UX thinking</li>
-            <li class="soft">Empathy</li>
-          </ul>
-        </div>
-
-        <div class="skills-category">
-          <h3>Language Skills</h3>
-          <ul>
-            <li class="language">Fluent English 🇬🇧</li>
-            <li class="language">Spanish Native 🇪🇸</li>
-          </ul>
+        <div class="project-card">
+          <h3>🥠 Fortune Smash</h3>
+          <img src="images/fortune-smash.png" alt="Fortune Smash Image" />
+          <p>Fortune Smash was built during a game jam as a collaborative project. The goal was to create a fast, fun, and creative game. Players smash magical cookies to reveal fortunes. The game received positive feedback for its whimsical art style and casual, arcade-like gameplay. Emphasizing creativity, the project encouraged rapid prototyping and effective collaboration within a short timeframe.</p>
+          <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
         </div>
       </div>
     </section>
 
-    <!-- CV Section -->
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <div class="skills-categories">
+    <div class="skills-category">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li class="technical">Java</li>
+        <li class="technical">Kotlin</li>
+        <li class="technical">Android Studio</li>
+        <li class="technical">MySQL</li>
+        <li class="technical">HTML & CSS</li>
+        <li class="technical">Git & GitHub</li>
+      </ul>
+    </div>
+
+    <div class="skills-category">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li class="soft">UX thinking</li>
+        <li class="soft">Empathy</li>
+      </ul>
+    </div>
+
+    <div class="skills-category">
+      <h3>Language Skills</h3>
+      <ul>
+        <li class="language">Fluent English 🇬🇧</li>
+        <li class="language">Spanish Native 🇪🇸</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
     <section id="cv">
       <h2>CV</h2>
       <p>Click below to view or download my CV in PDF format:</p>
       <a href="path_to_your_cv.pdf" target="_blank">🔗 View CV</a>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: your-email@example.com</p>
@@ -239,7 +320,5 @@
   <footer>
     © 2024 Noelia Rozado • All rights reserved
   </footer>
-
 </body>
 </html>
-
