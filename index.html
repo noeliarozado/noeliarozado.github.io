@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,13 +136,15 @@
       text-align: justify;
     }
 
-    /* Smaller images inside the cards */
+    /* Adjusting images inside cards */
     .project-card img {
       width: 100%;
-      max-width: 200px; /* Smaller size than above */
       height: auto;
+      max-width: 220px; /* Adjust size of the image */
       margin-bottom: 1rem;
-      border-radius: 8px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; /* Centers the image */
     }
 
     .skills ul {
@@ -209,7 +212,7 @@
       <div class="projects-grid">
         <div class="project-card">
           <h3>🎭 EmocionaApp</h3>
-          <img src="images/emociona.png" alt="EmocionaApp Image" class="project-image" />
+          <img src="images/emociona.png" alt="EmocionaApp Image" />
           <p>Users can record their emotions daily, noting the causes behind them. This helps track emotional patterns and fosters self-awareness. Based on the logged emotion, the app suggests an activity for the day to improve emotional regulation. 
             The app provides scientifically-backed self-regulation activities, including:</p>
           <ul>
@@ -224,14 +227,14 @@
 
         <div class="project-card">
           <h3>⌚ Smartwatch App</h3>
-          <img src="images/smartwatch.png" alt="Smartwatch App Image" class="project-image" />
+          <img src="images/smartwatch.png" alt="Smartwatch App Image" />
           <p>A smartwatch app designed to track and display health and fitness data in real time. The app offers users insights into their steps, calories burned, and key health metrics such as heart rate, blood pressure, and oxygen saturation. By displaying the current values as well as the highest and lowest readings of the day, users can easily monitor their health status. Additionally, the app integrates location tracking, allowing users to view their current location on a map.</p>
           <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
 
         <div class="project-card">
           <h3>🥠 Fortune Smash</h3>
-          <img src="images/fortune-smash.png" alt="Fortune Smash Image" class="project-image" />
+          <img src="images/fortune-smash.png" alt="Fortune Smash Image" />
           <p>Fortune Smash was built during a game jam as a collaborative project. The goal was to create a fast, fun, and creative game. Players smash magical cookies to reveal fortunes. The game received positive feedback for its whimsical art style and casual, arcade-like gameplay. Emphasizing creativity, the project encouraged rapid prototyping and effective collaboration within a short timeframe.</p>
           <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
         </div>
@@ -270,8 +273,5 @@
   <footer>
     © 2024 Noelia Rozado • All rights reserved
   </footer>
-</body>
-</html>
-
 </body>
 </html>
