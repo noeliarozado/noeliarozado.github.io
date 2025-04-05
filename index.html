@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Noelia Rozado | Developer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -58,44 +58,54 @@
     }
 
     nav a {
-      margin: 0 1.5rem;
+      margin: 0 1.2rem;
       text-decoration: none;
       color: #0077cc;
       font-weight: 500;
-      font-size: 1.1rem;
-      padding-bottom: 4px;
-      border-bottom: 2px solid transparent;
-      transition: border-bottom 0.3s ease;
+      font-size: 1.05rem;
     }
 
     nav a:hover {
-      border-bottom: 2px solid #0077cc;
+      color: #005fa3;
     }
 
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 3rem 1rem;
+      padding: 2.5rem 1rem;
     }
 
     section {
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
 
     h2 {
       font-size: 2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
       color: #004d6b;
       border-bottom: 3px solid #0077cc;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.4rem;
     }
 
-    /* Project Cards Section */
+    /* ABOUT */
+    #about p {
+      text-align: justify;
+    }
+
+    .about-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-size: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    /* PROJECTS */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
-      justify-items: center;
+      gap: 2.5rem;
     }
 
     .project-card {
@@ -104,7 +114,6 @@
       padding: 2rem;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      width: 100%;
       max-width: 350px;
       text-align: left;
     }
@@ -115,6 +124,7 @@
     }
 
     .project-card h3 {
+      text-align: center;
       margin-bottom: 1rem;
       font-size: 1.5rem;
       color: #004d6b;
@@ -128,29 +138,28 @@
     }
 
     .project-card p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 1.5rem;
       text-align: justify;
+      font-size: 0.98rem;
+      color: #555;
+      margin-bottom: 1.2rem;
     }
 
     .project-card a {
       text-decoration: none;
       background-color: #0077cc;
       color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 30px;
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
       font-weight: 500;
       font-size: 0.95rem;
       transition: background-color 0.3s ease;
-      display: inline-block;
     }
 
     .project-card a:hover {
       background-color: #005fa3;
     }
 
-    /* Skills Section */
+    /* SKILLS */
     .skills ul {
       display: flex;
       flex-wrap: wrap;
@@ -160,22 +169,21 @@
     }
 
     .skills-category {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .skills-category h3 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
       color: #004d6b;
     }
 
     .skills li {
       padding: 0.4rem 1rem;
-      border-radius: 30px;
+      border-radius: 25px;
       font-size: 0.95rem;
       color: white;
       background-color: #0077cc;
-      width: fit-content;
     }
 
     .skills li:hover {
@@ -183,43 +191,37 @@
       transition: background-color 0.3s ease;
     }
 
-    /* Contact Section */
-    .contact-info {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 2rem;
+    /* CV SECTION */
+    #cv a {
+      display: inline-block;
+      background-color: #0077cc;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
     }
 
-    .contact-info p {
-      margin: 0.5rem 0;
+    #cv a:hover {
+      background-color: #005fa3;
+    }
+
+    /* CONTACT */
+    .contact-info {
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 2;
     }
 
     .contact-info a {
       color: #0077cc;
-      text-decoration: none;
       font-weight: 500;
+      text-decoration: none;
     }
 
     .contact-info a:hover {
-      text-decoration: underline;
       color: #005fa3;
-    }
-
-    #cv a {
-      color: #0077cc;
-      text-decoration: none;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.3rem 0;
-      border-bottom: 1px solid transparent;
-      transition: color 0.2s ease, border-bottom 0.2s ease;
-    }
-
-    #cv a:hover {
-      color: #005fa3;
-      border-bottom: 1px solid #0077cc;
     }
 
     footer {
@@ -234,6 +236,22 @@
       color: white;
     }
 
+    @media screen and (max-width: 768px) {
+      nav a {
+        display: inline-block;
+        margin: 0.8rem 0.6rem;
+      }
+
+      .about-icons {
+        flex-direction: row;
+        gap: 1rem;
+      }
+
+      #about p {
+        text-align: center;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -241,12 +259,12 @@
   <header>
     <img src="https://avatars.githubusercontent.com/u/113633117?v=4" alt="Noelia Rozado">
     <h1>Noelia Rozado</h1>
-    <p>Junior Developer with a strong background in Education, Psychology, and HR</p>
+    <p>Junior Developer with a background in Education, Psychology, and HR</p>
     <p>Passionate about building meaningful applications that support learning, personal growth, and improve everyday lives.</p>
   </header>
 
   <nav>
-    <a href="#about">About Me</a>
+    <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#cv">CV</a>
@@ -254,36 +272,37 @@
   </nav>
 
   <div class="container">
-
     <section id="about">
       <h2>About Me</h2>
-      <p style="text-align: justify;">
-        I hold degrees in <strong>Teaching</strong> and <strong>Psychology</strong>, and a Master’s in <strong>HR</strong> (Human Resources). Most recently, I completed a Higher Technician degree in <strong>Multi-platform Applications Development</strong>. My diverse background allows me to deeply understand users’ needs — especially in areas like <strong>education</strong>, <strong>mental wellness</strong>, and <strong>human-centered technology</strong>. I’m currently seeking my first role as a developer and am eager to contribute to meaningful, user-focused solutions.
+      <div class="about-icons">
+        <span>🎓</span> <span>🧠</span> <span>💻</span>
+      </div>
+      <p>
+        I hold degrees in <strong>Teaching</strong> and <strong>Psychology</strong>, and a Master's in <strong>HR</strong>. Recently, I completed a Higher Technician degree in <strong>Multi-platform Applications Development</strong>. My multidisciplinary background allows me to better understand users' needs in areas such as <strong>education</strong>, <strong>mental wellness</strong>, and <strong>human-centered technology</strong>. I’m currently seeking my first role as a developer and eager to contribute to meaningful projects.
       </p>
     </section>
 
     <section id="projects">
       <h2>💻 Projects</h2>
-
       <div class="projects-grid">
         <div class="project-card">
           <h3>🎭 EmocionaApp</h3>
           <img src="images/emociona.png" alt="EmocionaApp Image" />
-          <p>EmocionaApp allows users to record their emotions daily and note the causes behind them. This helps track emotional patterns over time and fosters self-awareness. Based on the logged emotion, the app suggests an activity for the day to improve emotional regulation. The goal of the app is to enhance emotional well-being by promoting mindfulness and healthy habits.</p>
+          <p>A mobile app for tracking emotions, discovering causes, and learning self-regulation techniques. It includes daily logs, mindfulness exercises, and gamified experiences to build healthy emotional habits.</p>
           <a href="https://github.com/noeliarozado/EmocionaAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
 
         <div class="project-card">
-          <h3>⌚ VitalView</h3>
-          <img src="images/smartwatch.png" alt="Smartwatch App Image" />
-          <p>VitalView is a smartwatch app designed to track and display real-time health and fitness data. It provides insights into daily steps, calories burned, heart rate, blood pressure, oxygen saturation, and even location. Built with Ionic, the app helps users stay aware of their vital signs and improve their lifestyle habits through simple and actionable visuals.</p>
+          <h3>⌚ VitalTrack</h3>
+          <img src="images/smartwatch.png" alt="VitalTrack App Image" />
+          <p>Built with Ionic, VitalTrack is a smartwatch app that monitors health data like steps, heart rate, and oxygen levels in real-time, with map tracking and clean visual feedback to support better lifestyle awareness.</p>
           <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
 
         <div class="project-card">
           <h3>🥠 Fortune Smash</h3>
           <img src="images/fortune-smash.png" alt="Fortune Smash Image" />
-          <p>Fortune Smash was created during a game jam with the goal of designing a fun and creative arcade game where players smash cookies to reveal fortunes. The game was praised for its art style and playful concept. It offers a lighthearted experience while demonstrating high levels of creativity and collaboration within a tight development timeline.</p>
+          <p>A fun game-jam arcade project where players smash cookies to reveal quirky fortunes. Designed collaboratively, it highlights creativity, rapid prototyping, and teamwork in development.</p>
           <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
         </div>
       </div>
@@ -328,15 +347,15 @@
 
     <section id="cv">
       <h2>CV</h2>
-      <p>Click below to view or download my CV in PDF format:</p>
+      <p>Click below to view or download my CV:</p>
       <a href="path_to_your_cv.pdf" target="_blank">🔗 View CV</a>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <div class="contact-info">
-        <p><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/noeliarozado" target="_blank">noeliarozado</a></p>
+        <p>Email: your-email@example.com</p>
+        <p>GitHub: <a href="https://github.com/noeliarozado" target="_blank">noeliarozado</a></p>
       </div>
     </section>
   </div>
@@ -347,3 +366,4 @@
 
 </body>
 </html>
+
