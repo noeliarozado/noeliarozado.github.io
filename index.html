@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,39 +18,40 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #fffdfd;
-      color: #333;
+      background-color: #f5f5f5; /* Light gray background */
+      color: #333; /* Darker text for readability */
       line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #fdf0f0, #fff9e6);
-      padding: 2.5rem 1rem;
+      background: #004d6b; /* Deep blue background */
+      color: white;
+      padding: 3rem 1.5rem;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     header img {
       width: 120px;
       border-radius: 50%;
       margin-bottom: 1rem;
-      border: 3px solid #fff;
+      border: 4px solid white;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
 
     header p {
       font-size: 1rem;
-      color: #666;
+      color: #f1f1f1;
     }
 
     nav {
       background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       padding: 1rem;
       text-align: center;
       position: sticky;
@@ -57,78 +60,91 @@
     }
 
     nav a {
-      margin: 0 1rem;
+      margin: 0 1.5rem;
       text-decoration: none;
       color: #0077cc;
       font-weight: 500;
+      font-size: 1.1rem;
     }
 
     nav a:hover {
       text-decoration: underline;
+      color: #005fa3;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
     }
 
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.3rem;
-      color: #222;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #004d6b;
+      border-bottom: 3px solid #0077cc;
+      padding-bottom: 0.5rem;
     }
 
     /* Project Cards Section */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
       justify-items: center;
     }
 
     .project-card {
-      background: #fafafa;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-      transition: transform 0.3s ease;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       width: 100%;
       max-width: 350px;
-      position: relative;
-      overflow: hidden;
       text-align: center;
     }
 
     .project-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     }
 
     .project-card h3 {
       margin-bottom: 1rem;
-      color: #0077cc;
+      font-size: 1.5rem;
+      color: #004d6b;
     }
 
     .project-card img {
       width: 100%;
       height: auto;
-      max-width: 260px;
+      border-radius: 8px;
       margin-bottom: 1rem;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .project-card p {
-      text-align: justify;
-      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-card a {
+      text-decoration: none;
+      background-color: #0077cc;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background-color: #005fa3;
     }
 
     /* Skills Section */
@@ -141,47 +157,59 @@
     }
 
     .skills-category {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
     .skills-category h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      color: #333;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #004d6b;
     }
 
     .skills li {
-      padding: 0.6rem 1rem;
-      border-radius: 20px;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
       font-size: 1rem;
-      color: #fff;
+      color: white;
+      background-color: #0077cc;
       width: fit-content;
     }
 
-    .technical {
-      background-color: #0077cc;
-    }
-
-    .soft {
-      background-color: #8eec8e;
-    }
-
-    .language {
-      background-color: #6a5acd;
-    }
-
     .skills li:hover {
-      background-color: #555;
+      background-color: #005fa3;
       transition: background-color 0.3s ease;
+    }
+
+    /* Contact Section */
+    .contact-info {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .contact-info a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+      color: #005fa3;
     }
 
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: #aaa;
-      background: #fdfdfd;
+      background: #004d6b;
     }
+
+    footer p {
+      color: white;
+    }
+
   </style>
 </head>
 <body>
@@ -218,21 +246,21 @@
         <div class="project-card">
           <h3>🎭 EmocionaApp</h3>
           <img src="images/emociona.png" alt="EmocionaApp Image" />
-          <p>Users can record their emotions daily, noting the causes behind them. This helps track emotional patterns and fosters self-awareness. Based on the logged emotion, the app suggests an activity for the day to improve emotional regulation.</p>
+          <p>EmocionaApp allows users to record their emotions daily and note the causes behind them. This helps track emotional patterns over time and fosters self-awareness. Based on the logged emotion, the app suggests an activity for the day to improve emotional regulation. The goal of the app is to enhance emotional well-being by promoting mindfulness and healthy habits.</p>
           <a href="https://github.com/noeliarozado/EmocionaAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
 
         <div class="project-card">
           <h3>⌚ Smartwatch App</h3>
           <img src="images/smartwatch.png" alt="Smartwatch App Image" />
-          <p>A smartwatch app designed to track and display health and fitness data in real time. The app offers users insights into their steps, calories burned, heart rate, blood pressure, and location tracking.</p>
+          <p>This smartwatch app is designed to track and display health and fitness data in real time. The app provides users with insights into their steps, calories burned, heart rate, blood pressure, and location tracking. It integrates with the device’s sensors and offers actionable feedback to help users improve their health habits. The app was built with a focus on simplicity and functionality, making it easy to use during daily activities.</p>
           <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
 
         <div class="project-card">
           <h3>🥠 Fortune Smash</h3>
           <img src="images/fortune-smash.png" alt="Fortune Smash Image" />
-          <p>Fortune Smash was created during a game jam. The goal was to design a fun and creative game where players smash cookies to reveal fortunes. It received positive feedback for its art style and arcade gameplay.</p>
+          <p>Fortune Smash was created during a game jam with the goal of designing a fun and creative arcade game where players smash cookies to reveal fortunes. The game was well-received for its playful art style and engaging mechanics, providing players with both a relaxing and entertaining experience. It features a simple yet addicting gameplay loop that makes it a perfect time-killer for casual gamers.</p>
           <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
         </div>
       </div>
@@ -244,32 +272,32 @@
         <div class="skills-category">
           <h3>Technical Skills</h3>
           <ul>
-            <li class="technical">Java</li>
-            <li class="technical">Kotlin</li>
-            <li class="technical">Android Studio</li>
-            <li class="technical">MySQL</li>
-            <li class="technical">HTML & CSS</li>
-            <li class="technical">Git & GitHub</li>
-            <li class="technical">Firebase</li>
-            <li class="technical">Flutter</li>
+            <li>Java</li>
+            <li>Kotlin</li>
+            <li>Android Studio</li>
+            <li>MySQL</li>
+            <li>HTML & CSS</li>
+            <li>Git & GitHub</li>
+            <li>Firebase</li>
+            <li>Flutter</li>
           </ul>
         </div>
 
         <div class="skills-category">
           <h3>Soft Skills</h3>
           <ul>
-            <li class="soft">Collaboration</li>
-            <li class="soft">Problem Solving</li>
-            <li class="soft">Adaptability</li>
-            <li class="soft">Communication</li>
+            <li>Collaboration</li>
+            <li>Problem Solving</li>
+            <li>Adaptability</li>
+            <li>Communication</li>
           </ul>
         </div>
 
         <div class="skills-category">
           <h3>Languages</h3>
           <ul>
-            <li class="language">Spanish - Native</li>
-            <li class="language">English - B2</li>
+            <li>Spanish - Native</li>
+            <li>English - B2</li>
           </ul>
         </div>
       </div>
@@ -281,7 +309,6 @@
       <a href="path_to_your_cv.pdf" target="_blank">🔗 View CV</a>
     </section>
 
-
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: your-email@example.com</p>
@@ -289,11 +316,9 @@
     </section>
   </div>
 
-
   <footer>
     <p>&copy; 2025 Noelia Rozado | All Rights Reserved</p>
   </footer>
 
 </body>
 </html>
-
