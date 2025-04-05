@@ -149,16 +149,44 @@
       width: 250px;
       height: 90px;
       object-fit: contain;
+      margin-bottom: 1rem; /* Adjust margin to align with titles */
     }
     .smartwatch-img {
       width: 250px;
       height: 200px;
       object-fit: contain;
+      margin-bottom: 1rem;
     }
     .fortune-smash-img {
       width: 210px;
       height: 170px;
       object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    /* Adjust title heights */
+    .project-card h3 {
+      margin-top: 1rem; /* Ensure consistent title height */
+    }
+
+    .cv-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+      padding: 2rem;
+      background: #f9f9f9;
+    }
+    .cv-section a {
+      text-decoration: none;
+      padding: 1rem 2rem;
+      background-color: #0077cc;
+      color: white;
+      border-radius: 25px;
+      font-weight: 600;
+    }
+    .cv-section a:hover {
+      background-color: #005fa3;
     }
   </style>
 </head>
@@ -174,6 +202,7 @@
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
+    <a href="#cv">CV</a> <!-- New link for CV -->
   </nav>
   <div class="container">
     <section id="about">
@@ -205,42 +234,4 @@
         <div class="project-card">
           <img class="smartwatch-img" src="images/smartwatch-1.png" alt="Smartwatch App preview" />
           <h3>⌚ Smartwatch App</h3>
-          <p>A smartwatch app designed to track and display health and fitness data in real time. The app offers users insights into their steps, calories burned, and key health metrics such as heart rate, blood pressure, and oxygen saturation. By displaying the current values as well as the highest and lowest readings of the day, users can easily monitor their health status. Additionally, the app integrates location tracking, allowing users to view their current location on a map.</p>
-          <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
-        </div>
-        <div class="project-card">
-          <img class="fortune-smash-img" src="images/fortune-smash-cover.png" alt="Fortune Smash cover" />
-          <h3>🥠 Fortune Smash</h3>
-          <p>This collaborative game jam project involves smashing magical cookies to reveal fortunes. Built in a team, it emphasizes creativity and quick prototyping, with positive feedback from players for its whimsical art and fun gameplay.</p>
-          <p>Fortune Smash was well received for its creativity and fast-paced design, highlighting the importance of collaboration in a game jam environment. It’s a great example of turning an idea into a playable experience within a short timeframe.</p>
-          <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
-        </div>
-      </div>
-    </section>
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Java</li>
-        <li>Kotlin</li>
-        <li>Android Studio</li>
-        <li>MySQL</li>
-        <li>HTML & CSS</li>
-        <li>Git & GitHub</li>
-        <li>UX thinking</li>
-        <li>Empathy</li>
-        <li>Fluent English 🇬🇧</li>
-        <li>Spanish Native 🇪🇸</li>
-      </ul>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: your-email@example.com</p>
-      <p>GitHub: <a href="https://github.com/noeliarozado" target="_blank">noeliarozado</a></p>
-    </section>
-  </div>
-  <footer>
-    © 2024 Noelia Rozado • All rights reserved
-  </footer>
-</body>
-</html>
-
+          <p>A smartwatch app designed to track and display health and fitness data in real time. The app offers users insights into their steps, calories burned, and key health metrics such as heart rate, blood pressure, and oxygen saturation. By displaying the current values as well as the highest and lowest
