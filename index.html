@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,80 +88,33 @@
       color: #222;
     }
 
-    /* Project Images Section */
-    .project-images {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .project-images img {
-      width: 100%;
-      max-width: 250px; /* Keep the previous image size for the top images */
-      height: auto;
-      border-radius: 8px;
-    }
-
-    /* Project Cards Section */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      justify-items: center;
-    }
-
-    .project-card {
-      background: #fafafa;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-      transition: transform 0.3s ease;
-      width: 100%;
-      max-width: 350px;
-      position: relative; /* To ensure images appear inside the card */
-      overflow: hidden;  /* Prevents image overflow */
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .project-card h3 {
-      margin-top: 0.8rem;
-      color: #0077cc;
-    }
-
-    /* Justifying the text inside cards */
-    .project-card p {
-      text-align: justify;
-    }
-
-    /* Adjusting images inside cards */
-    .project-card img {
-      width: 100%;
-      height: auto;
-      max-width: 260px; /* Adjusting image size to be slightly larger */
-      margin-bottom: 1rem;
-      display: block;
-      margin-left: auto;
-      margin-right: auto; /* Centers the image */
-    }
-
-    .skills ul {
+    .skills-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 1rem;
       list-style: none;
       padding: 0;
     }
 
-    .skills li {
-      background: #eee;
-      padding: 0.6rem 1rem;
+    .skills-list li {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background: #f3f4f6;
       border-radius: 20px;
-      font-size: 0.9rem;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .skill-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 0.8rem;
+    }
+
+    .skills-list li:hover {
+      background-color: #e3e7ff;
+      transition: background-color 0.3s ease;
     }
 
     footer {
@@ -190,6 +144,7 @@
   </nav>
 
   <div class="container">
+    <!-- About Section -->
     <section id="about">
       <h2>About Me</h2>
       <p>
@@ -199,80 +154,51 @@
       </p>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
       <h2>💻 Projects</h2>
-
-      <!-- Project Images Section -->
-      <div class="project-images">
-        <img src="images/emociona.png" alt="EmocionaApp Image" />
-        <img src="images/smartwatch.png" alt="Smartwatch App Image" />
-        <img src="images/fortune-smash.png" alt="Fortune Smash Image" />
-      </div>
-
-      <!-- Project Cards Section -->
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>🎭 EmocionaApp</h3>
-          <img src="images/emociona.png" alt="EmocionaApp Image" />
-          <p>Users can record their emotions daily, noting the causes behind them. This helps track emotional patterns and fosters self-awareness. Based on the logged emotion, the app suggests an activity for the day to improve emotional regulation. 
-            The app provides scientifically-backed self-regulation activities, including:</p>
-          <ul>
-            <li>🌱 Breathing exercises</li>
-            <li>🧘 Progressive muscle relaxation</li>
-            <li>🧘 Body scan</li>
-            <li>🧘 Mindfulness meditation</li>
-            <li>🧘 Daily mindfulness practices</li>
-          </ul>
-          <a href="https://github.com/noeliarozado/EmocionaAppREADME" target="_blank">🔗 View on GitHub</a>
-        </div>
-
-        <div class="project-card">
-          <h3>⌚ Smartwatch App</h3>
-          <img src="images/smartwatch.png" alt="Smartwatch App Image" />
-          <p>A smartwatch app designed to track and display health and fitness data in real time. The app offers users insights into their steps, calories burned, and key health metrics such as heart rate, blood pressure, and oxygen saturation. By displaying the current values as well as the highest and lowest readings of the day, users can easily monitor their health status. Additionally, the app integrates location tracking, allowing users to view their current location on a map.</p>
-          <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
-        </div>
-
-        <div class="project-card">
-          <h3>🥠 Fortune Smash</h3>
-          <img src="images/fortune-smash.png" alt="Fortune Smash Image" />
-          <p>Fortune Smash was built during a game jam as a collaborative project. The goal was to create a fast, fun, and creative game. Players smash magical cookies to reveal fortunes. The game received positive feedback for its whimsical art style and casual, arcade-like gameplay. Emphasizing creativity, the project encouraged rapid prototyping and effective collaboration within a short timeframe.</p>
-          <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
-        </div>
-      </div>
+      <!-- Project Cards -->
     </section>
 
-    <section id="skills" class="skills">
+    <!-- Skills Section -->
+    <section id="skills">
       <h2>Skills</h2>
-      <ul>
-        <li>Java</li>
-        <li>Kotlin</li>
-        <li>Android Studio</li>
-        <li>MySQL</li>
-        <li>HTML & CSS</li>
-        <li>Git & GitHub</li>
-        <li>UX thinking</li>
-        <li>Empathy</li>
-        <li>Fluent English 🇬🇧</li>
-        <li>Spanish Native 🇪🇸</li>
+      <ul class="skills-list">
+        <li><img src="path_to_icon/java-icon.png" alt="Java Icon" class="skill-icon"> Java</li>
+        <li><img src="path_to_icon/kotlin-icon.png" alt="Kotlin Icon" class="skill-icon"> Kotlin</li>
+        <li><img src="path_to_icon/html-icon.png" alt="HTML Icon" class="skill-icon"> HTML</li>
+        <li><img src="path_to_icon/css-icon.png" alt="CSS Icon" class="skill-icon"> CSS</li>
+        <li><img src="path_to_icon/git-icon.png" alt="Git Icon" class="skill-icon"> Git & GitHub</li>
+        <li><img src="path_to_icon/ux-icon.png" alt="UX Icon" class="skill-icon"> UX Design</li>
+        <li><img src="path_to_icon/english-icon.png" alt="English Icon" class="skill-icon"> Fluent English 🇬🇧</li>
+        <li><img src="path_to_icon/spanish-icon.png" alt="Spanish Icon" class="skill-icon"> Native Spanish 🇪🇸</li>
       </ul>
     </section>
 
+    <!-- CV Section -->
     <section id="cv">
       <h2>CV</h2>
-      <p>Click below to view or download my CV in PDF format:</p>
-      <a href="path_to_your_cv.pdf" target="_blank">🔗 View CV</a>
+      <p>You can download my latest CV below:</p>
+      <a href="path_to_your_cv.pdf" target="_blank">🔗 Download CV (PDF)</a>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: your-email@example.com</p>
-      <p>GitHub: <a href="https://github.com/noeliarozado" target="_blank">noeliarozado</a></p>
+      <p>Contact me at: <span id="email-link" style="color: blue; cursor: pointer;">Email me</span></p>
     </section>
   </div>
 
   <footer>
-    © 2024 Noelia Rozado • All rights reserved
+    <p>&copy; 2025 Noelia Rozado. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript for Email Protection -->
+  <script>
+    document.getElementById("email-link").addEventListener("click", function() {
+      window.location.href = "mailto:" + "your-email@example.com";
+    });
+  </script>
+
 </body>
 </html>
