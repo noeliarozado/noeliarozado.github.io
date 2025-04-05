@@ -1,8 +1,5 @@
 
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +49,7 @@
 
     nav {
       background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
       padding: 1rem;
       text-align: center;
       position: sticky;
@@ -89,11 +86,19 @@
       color: #222;
     }
 
-    .projects-grid {
-      display: flex;
-      justify-content: space-between;
+    .project-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
-      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      justify-items: center;
+    }
+
+    .project-images img {
+      width: 100%;
+      max-width: 320px; /* Adjust image size to fit properly */
+      height: auto;
+      border-radius: 8px;
     }
 
     .project-card {
@@ -102,8 +107,11 @@
       padding: 1.5rem;
       margin-bottom: 2rem;
       box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-      flex-basis: 30%;
-      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
     }
 
     .project-card h3 {
@@ -126,28 +134,12 @@
       font-size: 0.9rem;
     }
 
-    .cv-section a {
-      color: #0077cc;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 1rem;
-      display: inline-block;
-    }
-
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #aaa;
       background: #fdfdfd;
-    }
-    
-    .project-image {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -164,8 +156,8 @@
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
     <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <div class="container">
@@ -180,50 +172,46 @@
 
     <section id="projects">
       <h2>💻 Projects</h2>
-      <div class="projects-grid">
 
+      <!-- Project Images Section -->
+      <div class="project-images">
+        <img src="images/emociona.png" alt="EmocionaApp Image" />
+        <img src="images/smartwatch.png" alt="Smartwatch App Image" />
+        <img src="images/fortune-smash.png" alt="Fortune Smash Image" />
+      </div>
+
+      <!-- Project Cards Section -->
+      <div class="projects-grid">
         <div class="project-card">
-          <div class="project-image">
-            <img src="images/emociona-logo.png" alt="Emociona App Logo" />
-          </div>
           <h3>🎭 EmocionaApp</h3>
-          <p>Users can record their emotions daily, noting the causes behind them. This helps track emotional patterns and fosters self-awareness. Based on the logged emotion, the app suggests an activity for the day to improve emotional regulation. The app provides scientifically-backed self-regulation activities, including:</p>
+          <p>Users can record their emotions daily, noting the causes behind them. This helps track emotional patterns and fosters self-awareness. Based on the logged emotion, the app suggests an activity for the day to improve emotional regulation. 
+            The app provides scientifically-backed self-regulation activities, including:</p>
           <ul>
             <li>🌱 Breathing exercises</li>
             <li>🧘 Progressive muscle relaxation</li>
-            <li>🧘‍♀️ Body scan</li>
+            <li>🧘 Body scan</li>
             <li>🧘 Mindfulness meditation</li>
-            <li>📱 Daily mindfulness practices</li>
+            <li>🧘 Daily mindfulness practices</li>
           </ul>
           <a href="https://github.com/noeliarozado/EmocionaAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
 
         <div class="project-card">
-          <div class="project-image">
-            <img src="images/smartwatch-1.png" alt="Smartwatch App Screenshot" />
-          </div>
           <h3>⌚ Smartwatch App</h3>
           <p>A smartwatch app designed to track and display health and fitness data in real time. The app offers users insights into their steps, calories burned, and key health metrics such as heart rate, blood pressure, and oxygen saturation. By displaying the current values as well as the highest and lowest readings of the day, users can easily monitor their health status. Additionally, the app integrates location tracking, allowing users to view their current location on a map.</p>
           <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
 
         <div class="project-card">
-          <div class="project-image">
-            <img src="images/fortune-smash-cover.png" alt="Fortune Smash Game Cover" />
-          </div>
           <h3>🥠 Fortune Smash</h3>
-          <p>Fortune Smash is an arcade-style game jam project created as a collaborative effort during a game jam. Players smash magical cookies to reveal fortunes. The game received positive feedback for its creativity and fun gameplay. It's a perfect example of fast prototyping and rapid collaboration.</p>
+          <p>Fortune Smash was built during a game jam as a collaborative project. The goal was to create a fast, fun, and creative game. Players smash magical cookies to reveal fortunes. The game received positive feedback for its whimsical art style and casual, arcade-like gameplay. Emphasizing creativity, the project encouraged rapid prototyping and effective collaboration within a short timeframe.</p>
           <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
         </div>
-
       </div>
     </section>
 
     <section id="skills" class="skills">
       <h2>Skills</h2>
-
-      <!-- Technical Skills -->
-      <h3>🛠️ Technical Skills</h3>
       <ul>
         <li>Java</li>
         <li>Kotlin</li>
@@ -231,26 +219,28 @@
         <li>MySQL</li>
         <li>HTML & CSS</li>
         <li>Git & GitHub</li>
-      </ul>
-
-      <!-- Soft Skills -->
-      <h3>💼 Soft Skills</h3>
-      <ul>
         <li>UX thinking</li>
         <li>Empathy</li>
-        <li>Teamwork</li>
-        <li>Problem-solving</li>
+        <li>Fluent English 🇬🇧</li>
+        <li>Spanish Native 🇪🇸</li>
       </ul>
     </section>
 
-    <section id="cv" class="cv-section">
-      <a href="Noelia_Rozado_CV.pdf" target="_blank">Download CV</a>
+    <section id="cv">
+      <h2>CV</h2>
+      <p>Click below to view or download my CV in PDF format:</p>
+      <a href="path_to_your_cv.pdf" target="_blank">🔗 View CV</a>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: your-email@example.com</p>
+      <p>GitHub: <a href="https://github.com/noeliarozado" target="_blank">noeliarozado</a></p>
     </section>
   </div>
 
   <footer>
     © 2024 Noelia Rozado • All rights reserved
   </footer>
-
 </body>
 </html>
