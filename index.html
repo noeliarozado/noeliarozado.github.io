@@ -13,21 +13,18 @@
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #fffdfd;
       color: #333;
       line-height: 1.6;
     }
-
     header {
       background: linear-gradient(135deg, #fdf0f0, #fff9e6);
       padding: 2.5rem 1rem;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-
     header img {
       width: 120px;
       border-radius: 50%;
@@ -35,17 +32,14 @@
       border: 3px solid #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
     header h1 {
       font-size: 2.2rem;
       margin-bottom: 0.5rem;
     }
-
     header p {
       font-size: 1rem;
       color: #666;
     }
-
     nav {
       background-color: #fff;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -55,28 +49,23 @@
       top: 0;
       z-index: 10;
     }
-
     nav a {
       margin: 0 1rem;
       text-decoration: none;
       color: #0077cc;
       font-weight: 500;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
-
     .container {
       max-width: 1000px;
       margin: auto;
       padding: 2rem 1rem;
     }
-
     section {
       margin-bottom: 3rem;
     }
-
     h2 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
@@ -84,41 +73,55 @@
       padding-bottom: 0.3rem;
       color: #222;
     }
-
     .projects-grid {
       display: flex;
-      justify-content: center; /* Centers all the project cards */
+      justify-content: center;
       gap: 2rem;
       padding: 2rem 0;
       flex-wrap: wrap;
     }
-
     .project-card {
       background: #fafafa;
       border-radius: 10px;
       padding: 1.5rem;
       box-shadow: 0 6px 16px rgba(0,0,0,0.06);
       transition: transform 0.3s ease;
-      flex: 1 1 30%; /* Ensures each card takes up around 30% of the space */
+      flex: 1 1 30%;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-
     .project-card:hover {
       transform: translateY(-5px);
     }
-
     .project-card img {
-      width: 100%;
-      height: auto;
+      display: block;
+      margin: 0 auto 1rem auto;
       object-fit: contain;
-      margin-bottom: 1rem;
     }
-
     .project-card h3 {
       margin-top: 0.8rem;
       color: #0077cc;
     }
-
+    .project-card p, 
+    .project-card ul {
+      text-align: justify;
+    }
+    .project-card ul {
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
+    .project-card a {
+      margin-top: 1rem;
+      display: inline-block;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+    }
+    .project-card a:hover {
+      text-decoration: underline;
+    }
     .skills ul {
       display: flex;
       flex-wrap: wrap;
@@ -126,14 +129,12 @@
       list-style: none;
       padding: 0;
     }
-
     .skills li {
       background: #eee;
       padding: 0.6rem 1rem;
       border-radius: 20px;
       font-size: 0.9rem;
     }
-
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -141,20 +142,17 @@
       color: #aaa;
       background: #fdfdfd;
     }
-
     /* Custom image sizes for each project */
     .emociona-img {
       width: 250px;
       height: 90px;
       object-fit: contain;
     }
-
     .smartwatch-img {
       width: 250px;
       height: 200px;
       object-fit: contain;
     }
-
     .fortune-smash-img {
       width: 210px;
       height: 170px;
@@ -163,21 +161,18 @@
   </style>
 </head>
 <body>
-
   <header>
     <img src="https://avatars.githubusercontent.com/u/113633117?v=4" alt="Noelia Rozado">
     <h1>Noelia Rozado</h1>
     <p>Junior Developer with a strong background in Education, Psychology, and HR</p>
     <p>Passionate about building meaningful applications that support learning, personal growth, and improve everyday lives.</p>
   </header>
-
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
-
   <div class="container">
     <section id="about">
       <h2>About Me</h2>
@@ -187,11 +182,9 @@
         I’m currently seeking my first role as a developer and eager to contribute to meaningful projects.
       </p>
     </section>
-
     <section id="projects">
       <h2>💻 Projects</h2>
       <div class="projects-grid">
-
         <div class="project-card">
           <img class="emociona-img" src="images/emociona-logo.png" alt="Emociona App logo" />
           <h3>🎭 EmocionaApp</h3>
@@ -207,14 +200,12 @@
           <p>These techniques are tailored to help users reduce stress and enhance well-being.</p>
           <a href="https://github.com/noeliarozado/EmocionaAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
-
         <div class="project-card">
           <img class="smartwatch-img" src="images/smartwatch-1.png" alt="Smartwatch App preview" />
           <h3>⌚ Smartwatch App</h3>
           <p>A smartwatch app designed to track and display health and fitness data in real time. The app offers users insights into their steps, calories burned, and key health metrics such as heart rate, blood pressure, and oxygen saturation. By displaying the current values as well as the highest and lowest readings of the day, users can easily monitor their health status. Additionally, the app integrates location tracking, allowing users to view their current location on a map.</p>
           <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
-
         <div class="project-card">
           <img class="fortune-smash-img" src="images/fortune-smash-cover.png" alt="Fortune Smash cover" />
           <h3>🥠 Fortune Smash</h3>
@@ -222,10 +213,8 @@
           <p>Fortune Smash was well received for its creativity and fast-paced design, highlighting the importance of collaboration in a game jam environment. It’s a great example of turning an idea into a playable experience within a short timeframe.</p>
           <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
         </div>
-
       </div>
     </section>
-
     <section id="skills" class="skills">
       <h2>Skills</h2>
       <ul>
@@ -241,17 +230,16 @@
         <li>Spanish Native 🇪🇸</li>
       </ul>
     </section>
-
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: your-email@example.com</p>
       <p>GitHub: <a href="https://github.com/noeliarozado" target="_blank">noeliarozado</a></p>
     </section>
   </div>
-
   <footer>
     © 2024 Noelia Rozado • All rights reserved
   </footer>
 </body>
 </html>
+
 
