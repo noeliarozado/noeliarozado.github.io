@@ -1,223 +1,240 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Noelia Rozado | Developer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
- <style>
-  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
 
-  body {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-  }
+    header {
+      background: #004d6b;
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
-  header {
-    background: #004d6b;
-    color: white;
-    padding: 3rem 1.5rem;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 4px solid white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-  header img {
-    width: 120px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    border: 4px solid white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
+    header p {
+      font-size: 1rem;
+      color: #f1f1f1;
+    }
 
-  header p {
-    font-size: 1rem;
-    color: #f1f1f1;
-  }
+    nav {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-  nav {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
+    nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s ease;
+    }
 
-  nav a {
-    margin: 0 1.5rem;
-    text-decoration: none;
-    color: #0077cc;
-    font-weight: 500;
-    font-size: 1.1rem;
-    padding: 0.3rem 0.5rem;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s ease, color 0.2s ease;
-  }
+    nav a:hover {
+      border-bottom: 2px solid #0077cc;
+    }
 
-  nav a:hover {
-    border-bottom: 2px solid #0077cc;
-    color: #005fa3;
-  }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 3rem 1rem;
+    }
 
-  .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 3rem 1rem;
-  }
+    section {
+      margin-bottom: 4rem;
+    }
 
-  section {
-    margin-bottom: 4rem;
-  }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #004d6b;
+      border-bottom: 3px solid #0077cc;
+      padding-bottom: 0.5rem;
+    }
 
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #004d6b;
-    border-bottom: 3px solid #0077cc;
-    padding-bottom: 0.5rem;
-  }
+    /* Project Cards Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      justify-items: center;
+    }
 
-  /* Project Cards */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    justify-items: center;
-  }
+    .project-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      max-width: 350px;
+      text-align: left;
+    }
 
-  .project-card {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    max-width: 350px;
-    text-align: center;
-  }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
 
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  }
+    .project-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #004d6b;
+    }
 
-  .project-card h3 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: #004d6b;
-  }
+    .project-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
 
-  .project-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
+    .project-card p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
 
-  .project-card p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 1.2rem;
-  }
+    .project-card a {
+      text-decoration: none;
+      background-color: #0077cc;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
 
-  .project-card a {
-    text-decoration: none;
-    background-color: #0077cc;
-    color: white;
-    padding: 0.5rem 1.2rem;
-    border-radius: 25px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-  }
+    .project-card a:hover {
+      background-color: #005fa3;
+    }
 
-  .project-card a:hover {
-    background-color: #005fa3;
-  }
+    /* Skills Section */
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      list-style: none;
+      padding: 0;
+    }
 
-  /* Skills Section */
-  .skills ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
-  }
+    .skills-category {
+      margin-bottom: 1.5rem;
+    }
 
-  .skills-category {
-    margin-bottom: 3rem;
-  }
+    .skills-category h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #004d6b;
+    }
 
-  .skills-category h3 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    color: #004d6b;
-  }
+    .skills li {
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      color: white;
+      background-color: #0077cc;
+      width: fit-content;
+    }
 
-  .skills li {
-    padding: 0.4rem 1rem;
-    border-radius: 25px;
-    font-size: 0.95rem;
-    color: white;
-    background-color: #0077cc;
-    width: fit-content;
-  }
+    .skills li:hover {
+      background-color: #005fa3;
+      transition: background-color 0.3s ease;
+    }
 
-  .skills li:hover {
-    background-color: #005fa3;
-    transition: background-color 0.3s ease;
-  }
+    /* Contact Section */
+    .contact-info {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
 
-  /* Contact & CV Section */
-  .contact-info {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 2rem;
-  }
+    .contact-info p {
+      margin: 0.5rem 0;
+    }
 
-  .contact-info a,
-  #cv a {
-    color: #0077cc;
-    text-decoration: none;
-    font-weight: 500;
-    border-bottom: 1px solid transparent;
-    transition: color 0.2s ease, border-bottom 0.2s ease;
-  }
+    .contact-info a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-  .contact-info a:hover,
-  #cv a:hover {
-    color: #005fa3;
-    border-bottom: 1px solid #0077cc;
-  }
+    .contact-info a:hover {
+      text-decoration: underline;
+      color: #005fa3;
+    }
 
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    font-size: 1rem;
-    color: white;
-    background: #004d6b;
-  }
-</style>
+    #cv a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s ease, border-bottom 0.2s ease;
+    }
 
+    #cv a:hover {
+      color: #005fa3;
+      border-bottom: 1px solid #0077cc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 1rem;
+      color: #aaa;
+      background: #004d6b;
+    }
+
+    footer p {
+      color: white;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -229,7 +246,7 @@
   </header>
 
   <nav>
-    <a href="#about">About</a>
+    <a href="#about">About Me</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#cv">CV</a>
@@ -237,12 +254,11 @@
   </nav>
 
   <div class="container">
+
     <section id="about">
       <h2>About Me</h2>
-      <p>
-        I hold degrees in Teaching and Psychology, and a Master’s in Human Resources. Most recently, I completed a Higher Technician degree in Multi-platform Applications Development.
-        My diverse background helps me understand users’ needs, especially in areas like education, mental wellness, and people-focused technology. 
-        I’m currently seeking my first role as a developer and eager to contribute to meaningful projects.
+      <p style="text-align: justify;">
+        I hold degrees in <strong>Teaching</strong> and <strong>Psychology</strong>, and a Master’s in <strong>HR</strong> (Human Resources). Most recently, I completed a Higher Technician degree in <strong>Multi-platform Applications Development</strong>. My diverse background allows me to deeply understand users’ needs — especially in areas like <strong>education</strong>, <strong>mental wellness</strong>, and <strong>human-centered technology</strong>. I’m currently seeking my first role as a developer and am eager to contribute to meaningful, user-focused solutions.
       </p>
     </section>
 
@@ -258,16 +274,16 @@
         </div>
 
         <div class="project-card">
-          <h3>⌚ Smartwatch App</h3>
+          <h3>⌚ VitalView</h3>
           <img src="images/smartwatch.png" alt="Smartwatch App Image" />
-          <p>This smartwatch app is designed to track and display health and fitness data in real time. The app provides users with insights into their steps, calories burned, heart rate, blood pressure, and location tracking. It integrates with the device’s sensors and offers actionable feedback to help users improve their health habits. The app was built with a focus on simplicity and functionality, making it easy to use during daily activities.</p>
+          <p>VitalView is a smartwatch app designed to track and display real-time health and fitness data. It provides insights into daily steps, calories burned, heart rate, blood pressure, oxygen saturation, and even location. Built with Ionic, the app helps users stay aware of their vital signs and improve their lifestyle habits through simple and actionable visuals.</p>
           <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
 
         <div class="project-card">
           <h3>🥠 Fortune Smash</h3>
           <img src="images/fortune-smash.png" alt="Fortune Smash Image" />
-          <p>Fortune Smash was created during a game jam with the goal of designing a fun and creative arcade game where players smash cookies to reveal fortunes. The game was well-received for its playful art style and engaging mechanics, providing players with both a relaxing and entertaining experience. It features a simple yet addicting gameplay loop that makes it a perfect time-killer for casual gamers.</p>
+          <p>Fortune Smash was created during a game jam with the goal of designing a fun and creative arcade game where players smash cookies to reveal fortunes. The game was praised for its art style and playful concept. It offers a lighthearted experience while demonstrating high levels of creativity and collaboration within a tight development timeline.</p>
           <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
         </div>
       </div>
@@ -318,8 +334,10 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: your-email@example.com</p>
-      <p>GitHub: <a href="https://github.com/noeliarozado" target="_blank">noeliarozado</a></p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/noeliarozado" target="_blank">noeliarozado</a></p>
+      </div>
     </section>
   </div>
 
