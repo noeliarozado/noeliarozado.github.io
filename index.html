@@ -97,11 +97,11 @@
     }
     .project-card img {
       display: block;
-      margin: 0 auto 1rem auto;
+      margin: 0 auto;
       object-fit: contain;
     }
     .project-card h3 {
-      margin-top: 0.8rem;
+      margin-top: 1rem;
       color: #0077cc;
     }
     .project-card p, 
@@ -136,13 +136,21 @@
       border-radius: 20px;
       font-size: 0.9rem;
     }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #aaa;
-      background: #fdfdfd;
+    /* Adding bubble style for Languages section */
+    .languages ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+      padding: 0;
     }
+    .languages li {
+      background: #eee;
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
     /* Custom image sizes for each project */
     .emociona-img {
       width: 250px;
@@ -163,9 +171,9 @@
       margin-bottom: 1rem;
     }
 
-    /* Adjust title heights */
+    /* Ensure all titles are aligned on the same line */
     .project-card h3 {
-      margin-top: 1rem; /* Ensure consistent title height */
+      margin-top: 0.8rem; /* Ensure consistent title height */
     }
 
     .cv-section {
@@ -200,8 +208,8 @@
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
+    <a href="#cv">CV</a> <!-- New CV link -->
     <a href="#contact">Contact</a>
-    <a href="#cv">CV</a> <!-- New link for CV -->
   </nav>
   <div class="container">
     <section id="about">
@@ -248,7 +256,7 @@
     <section id="skills">
       <h2>Skills</h2>
       <h3>Technical Skills</h3>
-      <ul>
+      <ul class="skills">
         <li>Java</li>
         <li>Kotlin</li>
         <li>Android Studio</li>
@@ -257,29 +265,33 @@
         <li>Git & GitHub</li>
       </ul>
       <h3>Soft Skills</h3>
-      <ul>
+      <ul class="skills">
         <li>Teamwork</li>
         <li>Client-oriented</li>
         <li>Problem Solving</li>
         <li>Empathy</li>
         <li>Fluent in English 🇬🇧</li>
-        <li>Spanish Native 🇪🇸</li>
       </ul>
+      <h3>Languages</h3>
+      <ul class="languages">
+        <li>Spanish (Native) 🇪🇸</li>
+        <li>English (Fluent) 🇬🇧</li>
+      </ul>
+    </section>
+    <section id="cv">
+      <h2>Download CV</h2>
+      <p>Click the link below to download my CV in PDF format:</p>
+      <a href="path/to/your-cv.pdf" target="_blank">Download CV (PDF)</a>
     </section>
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: your-email@example.com</p>
       <p>GitHub: <a href="https://github.com/noeliarozado" target="_blank">noeliarozado</a></p>
     </section>
-
-    <!-- CV Section -->
-    <section id="cv" class="cv-section">
-      <a href="path/to/your-cv.pdf" target="_blank">Download CV (PDF)</a>
-    </section>
-
   </div>
   <footer>
     © 2024 Noelia Rozado • All rights reserved
   </footer>
 </body>
 </html>
+
