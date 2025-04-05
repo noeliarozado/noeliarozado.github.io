@@ -85,6 +85,13 @@
       color: #222;
     }
 
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
     .project-card {
       background: #fafafa;
       border-radius: 10px;
@@ -102,6 +109,7 @@
       width: 100%;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      object-fit: cover;
     }
 
     .project-card h3 {
@@ -131,6 +139,22 @@
       color: #aaa;
       background: #fdfdfd;
     }
+
+    /* Custom image sizes */
+    .emociona-img {
+      max-width: 307px;
+      height: auto;
+    }
+
+    .smartwatch-img {
+      max-width: 378px;
+      height: auto;
+    }
+
+    .fortune-smash-img {
+      max-width: 315px;
+      height: auto;
+    }
   </style>
 </head>
 <body>
@@ -159,31 +183,63 @@
       </p>
     </section>
 
-   <section id="projects">
-      <h2>Projects</h2>
+    <section id="projects">
+      <h2>💻 Projects</h2>
+      <div class="projects-grid">
 
-      <div class="project-card">
-        <img src="https://raw.githubusercontent.com/noeliarozado/EmocionaAppREADME/main/images/emociona1.png" alt="Emociona App Screenshot">
-        <h3><a href="https://github.com/noeliarozado/EmocionaAppREADME" target="_blank">EmocionaApp</a></h3>
-        <p>
-          An educational mobile app that helps children recognize and express emotions through fun activities. Designed with emotional intelligence in mind.
-        </p>
-      </div>
+        <div class="project-card">
+          <!-- Emociona App images -->
+          <img class="emociona-img" src="images/emociona-logo.png" alt="Emociona App logo" />
+          <h3>🎭 EmocionaApp</h3>
+          <p>A mobile app to support emotional self-awareness through daily emotion tracking and gamified self-care.</p>
+          <ul>
+            <li>🌱 Grow a virtual plant by logging emotions daily</li>
+            <li>🧘 Breathing, mindfulness, and other self-regulation tools</li>
+            <li>📄 Export emotion logs as PDFs for therapists</li>
+            <li>🎮 Mini-games: puzzles, tea time, memory cards</li>
+            <li>🏅 Monthly badge rewards</li>
+          </ul>
+          <a href="https://github.com/noeliarozado/EmocionaAppREADME" target="_blank">🔗 View on GitHub</a>
 
-      <div class="project-card">
-        <img src="https://raw.githubusercontent.com/noeliarozado/SmartwatchAppREADME/main/images/smartwatch1.png" alt="Smartwatch App Screenshot">
-        <h3><a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">Smartwatch Fitness App</a></h3>
-        <p>
-          A health-tracking smartwatch app focused on motivation and usability, based on psychological principles of behavior change.
-        </p>
-      </div>
+          <!-- Additional Emociona App screenshots -->
+          <img class="emociona-img" src="images/emociona-screenshot1.png" alt="Emociona App screenshot" />
+          <img class="emociona-img" src="images/emociona-screenshot2.png" alt="Emociona App screenshot" />
+          <img class="emociona-img" src="images/emociona-screenshot3.png" alt="Emociona App screenshot" />
+        </div>
 
-      <div class="project-card">
-        <img src="https://img.itch.zone/aW1hZ2UvMjEzMTAxMi8xMjQ4MjkzOC5naWY=/original/G0LgQJ.gif" alt="Fortune Smash Game">
-        <h3><a href="https://apiratehat.itch.io/fortune-smash" target="_blank">Fortune Smash</a></h3>
-        <p>
-          A fast-paced 2D arcade-style game developed with a friend during a game jam. Playable online on Itch.io!
-        </p>
+        <div class="project-card">
+          <!-- Smartwatch App images -->
+          <img class="smartwatch-img" src="images/smartwatch-1.png" alt="Smartwatch App preview" />
+          <h3>⌚ Smartwatch App</h3>
+          <p>Built with Ionic, this app tracks real-time fitness data and health metrics on your wrist.</p>
+          <ul>
+            <li>👟 Step counter and calories burned</li>
+            <li>❤️ Heart rate, 💨 blood pressure, 🩸 oxygen saturation</li>
+            <li>📍 Real-time GPS and current address</li>
+            <li>📊 Daily summaries with high/low readings</li>
+          </ul>
+          <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
+
+          <!-- Additional Smartwatch App screenshot -->
+          <img class="smartwatch-img" src="images/smartwatch-2.png" alt="Smartwatch App screenshot" />
+        </div>
+
+        <div class="project-card">
+          <!-- Fortune Smash game images -->
+          <img class="fortune-smash-img" src="images/fortune-smash-cover.png" alt="Fortune Smash cover" />
+          <h3>🥠 Fortune Smash</h3>
+          <p>An arcade-style game jam project where players smash magical cookies to reveal fortunes.</p>
+          <ul>
+            <li>🎮 Fun and casual gameplay with whimsical art</li>
+            <li>🤝 Built in collaboration during a game jam</li>
+            <li>✨ Emphasizes creativity and fast prototyping</li>
+          </ul>
+          <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
+
+          <!-- Additional Fortune Smash gameplay screenshot -->
+          <img class="fortune-smash-img" src="images/fortune-smash-gameplay.png" alt="Fortune Smash gameplay" />
+        </div>
+
       </div>
     </section>
 
