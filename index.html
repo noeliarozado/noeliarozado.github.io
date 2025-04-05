@@ -1,5 +1,8 @@
 
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,6 +93,7 @@
       display: flex;
       justify-content: space-between;
       gap: 2rem;
+      flex-wrap: wrap;
     }
 
     .project-card {
@@ -100,14 +104,6 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.06);
       flex-basis: 30%;
       text-align: center;
-    }
-
-    .project-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 1rem;
     }
 
     .project-card h3 {
@@ -130,6 +126,14 @@
       font-size: 0.9rem;
     }
 
+    .cv-section a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -137,11 +141,13 @@
       color: #aaa;
       background: #fdfdfd;
     }
-
-    .cv-section a {
-      color: #0077cc;
-      text-decoration: none;
-      font-weight: bold;
+    
+    .project-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -177,7 +183,9 @@
       <div class="projects-grid">
 
         <div class="project-card">
-          <img src="images/emociona.png" alt="Emociona App Logo" />
+          <div class="project-image">
+            <img src="images/emociona.png" alt="Emociona App Logo" />
+          </div>
           <h3>🎭 EmocionaApp</h3>
           <p>Users can record their emotions daily, noting the causes behind them. This helps track emotional patterns and fosters self-awareness. Based on the logged emotion, the app suggests an activity for the day to improve emotional regulation. The app provides scientifically-backed self-regulation activities, including:</p>
           <ul>
@@ -191,14 +199,18 @@
         </div>
 
         <div class="project-card">
-          <img src="images/smartwatch.png" alt="Smartwatch App Screenshot" />
+          <div class="project-image">
+            <img src="images/smartwatch.png" alt="Smartwatch App Screenshot" />
+          </div>
           <h3>⌚ Smartwatch App</h3>
           <p>A smartwatch app designed to track and display health and fitness data in real time. The app offers users insights into their steps, calories burned, and key health metrics such as heart rate, blood pressure, and oxygen saturation. By displaying the current values as well as the highest and lowest readings of the day, users can easily monitor their health status. Additionally, the app integrates location tracking, allowing users to view their current location on a map.</p>
           <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
 
         <div class="project-card">
-          <img src="images/fortune-smash.png" alt="Fortune Smash Game Cover" />
+          <div class="project-image">
+            <img src="images/fortune-smash.png" alt="Fortune Smash Game Cover" />
+          </div>
           <h3>🥠 Fortune Smash</h3>
           <p>Fortune Smash is an arcade-style game jam project created as a collaborative effort during a game jam. Players smash magical cookies to reveal fortunes. The game received positive feedback for its creativity and fun gameplay. It's a perfect example of fast prototyping and rapid collaboration.</p>
           <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
@@ -209,6 +221,9 @@
 
     <section id="skills" class="skills">
       <h2>Skills</h2>
+
+      <!-- Technical Skills -->
+      <h3>🛠️ Technical Skills</h3>
       <ul>
         <li>Java</li>
         <li>Kotlin</li>
@@ -216,10 +231,15 @@
         <li>MySQL</li>
         <li>HTML & CSS</li>
         <li>Git & GitHub</li>
+      </ul>
+
+      <!-- Soft Skills -->
+      <h3>💼 Soft Skills</h3>
+      <ul>
         <li>UX thinking</li>
         <li>Empathy</li>
-        <li>Fluent English 🇬🇧</li>
-        <li>Spanish Native 🇪🇸</li>
+        <li>Teamwork</li>
+        <li>Problem-solving</li>
       </ul>
     </section>
 
@@ -231,7 +251,6 @@
   <footer>
     © 2024 Noelia Rozado • All rights reserved
   </footer>
+
 </body>
 </html>
-
-
