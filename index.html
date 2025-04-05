@@ -14,18 +14,21 @@
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #fffdfd;
       color: #333;
       line-height: 1.6;
     }
+
     header {
       background: linear-gradient(135deg, #fdf0f0, #fff9e6);
       padding: 2.5rem 1rem;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
+
     header img {
       width: 120px;
       border-radius: 50%;
@@ -33,40 +36,48 @@
       border: 3px solid #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
     header h1 {
       font-size: 2.2rem;
       margin-bottom: 0.5rem;
     }
+
     header p {
       font-size: 1rem;
       color: #666;
     }
+
     nav {
       background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       padding: 1rem;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 10;
     }
+
     nav a {
       margin: 0 1rem;
       text-decoration: none;
       color: #0077cc;
       font-weight: 500;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     .container {
       max-width: 1000px;
       margin: auto;
       padding: 2rem 1rem;
     }
+
     section {
       margin-bottom: 3rem;
     }
+
     h2 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
@@ -74,52 +85,36 @@
       padding-bottom: 0.3rem;
       color: #222;
     }
+
     .projects-grid {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       gap: 2rem;
-      padding: 2rem 0;
-      flex-wrap: wrap;
     }
+
     .project-card {
       background: #fafafa;
       border-radius: 10px;
       padding: 1.5rem;
+      margin-bottom: 2rem;
       box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-      transition: transform 0.3s ease;
-      flex: 1 1 30%;
+      flex-basis: 30%;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100%;
     }
-    .project-card:hover {
-      transform: translateY(-5px);
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
     }
+
     .project-card h3 {
-      margin-top: 1rem;
+      margin-top: 0.8rem;
       color: #0077cc;
     }
-    .project-card p, 
-    .project-card ul {
-      width: 100%; /* Make sure text containers span the full width */
-      text-align: justify; /* Justify the text */
-    }
-    .project-card ul {
-      padding-left: 1rem;
-      margin: 1rem 0;
-    }
-    .project-card a {
-      margin-top: 1rem;
-      display: inline-block;
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: 500;
-    }
-    .project-card a:hover {
-      text-decoration: underline;
-    }
+
     .skills ul {
       display: flex;
       flex-wrap: wrap;
@@ -127,111 +122,46 @@
       list-style: none;
       padding: 0;
     }
+
     .skills li {
       background: #eee;
       padding: 0.6rem 1rem;
       border-radius: 20px;
       font-size: 0.9rem;
     }
-    /* Adding bubble style for Languages section */
-    .languages ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      list-style: none;
-      padding: 0;
-    }
-    .languages li {
-      background: #eee;
-      padding: 0.6rem 1rem;
-      border-radius: 20px;
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
       font-size: 0.9rem;
+      color: #aaa;
+      background: #fdfdfd;
     }
 
-    /* Custom image sizes for each project */
-    .emociona-img {
-      width: 250px;
-      height: 90px;
-      object-fit: contain;
-      margin-bottom: 2.5rem; /* Adjusted margin to move Emociona App title higher */
-    }
-    .smartwatch-img {
-      width: 250px;
-      height: 200px;
-      object-fit: contain;
-      margin-bottom: 1.5rem;
-    }
-    .fortune-smash-img {
-      width: 210px;
-      height: 170px;
-      object-fit: contain;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Ensure all titles are aligned on the same line */
-    .project-card h3 {
-      margin-top: 0.8rem; /* Ensure consistent title height */
-    }
-
-    /* Custom spacing adjustments for title positioning */
-    .project-card h3:nth-child(1) {
-      margin-top: 3rem; /* Move EmocionaApp title higher */
-    }
-    .project-card h3:nth-child(2) {
-      margin-top: 1.5rem; /* Move Fortune Smash title a little higher */
-    }
-
-    /* Return skill bubbles to original format */
-    .skills ul {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      padding-left: 0;
-    }
-
-    .skills li {
-      background-color: #0077cc;
-      color: white;
-      padding: 8px 20px;
-      border-radius: 50px;
-      font-size: 14px;
-    }
-
-    .cv-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 2rem;
-      padding: 2rem;
-      background: #f9f9f9;
-    }
     .cv-section a {
+      color: #0077cc;
       text-decoration: none;
-      padding: 1rem 2rem;
-      background-color: #0077cc;
-      color: white;
-      border-radius: 25px;
-      font-weight: 600;
-    }
-    .cv-section a:hover {
-      background-color: #005fa3;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="https://avatars.githubusercontent.com/u/113633117?v=4" alt="Noelia Rozado">
     <h1>Noelia Rozado</h1>
     <p>Junior Developer with a strong background in Education, Psychology, and HR</p>
     <p>Passionate about building meaningful applications that support learning, personal growth, and improve everyday lives.</p>
   </header>
+
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
-    <a href="#cv">CV</a> <!-- New CV link -->
     <a href="#contact">Contact</a>
+    <a href="#cv">CV</a>
   </nav>
+
   <div class="container">
     <section id="about">
       <h2>About Me</h2>
@@ -241,68 +171,67 @@
         I’m currently seeking my first role as a developer and eager to contribute to meaningful projects.
       </p>
     </section>
+
     <section id="projects">
       <h2>💻 Projects</h2>
       <div class="projects-grid">
+
         <div class="project-card">
-          <img class="emociona-img" src="images/emociona-logo.png" alt="Emociona App logo" />
+          <img src="images/emociona.png" alt="Emociona App Logo" />
           <h3>🎭 EmocionaApp</h3>
-          <p>Users can record their emotions daily, noting the causes behind them. This helps track emotional patterns and fosters self-awareness. Based on the logged emotion, the app suggests an activity for the day to improve emotional regulation.</p>
-          <p>The app provides scientifically-backed self-regulation activities, including:</p>
+          <p>Users can record their emotions daily, noting the causes behind them. This helps track emotional patterns and fosters self-awareness. Based on the logged emotion, the app suggests an activity for the day to improve emotional regulation. The app provides scientifically-backed self-regulation activities, including:</p>
           <ul>
             <li>🌱 Breathing exercises</li>
-            <li>💪 Progressive muscle relaxation</li>
-            <li>🧘 Body scan</li>
-            <li>🧘‍♂️ Mindfulness meditation</li>
-            <li>🧘‍♀️ Daily mindfulness practices</li>
+            <li>🧘 Progressive muscle relaxation</li>
+            <li>🧘‍♀️ Body scan</li>
+            <li>🧘 Mindfulness meditation</li>
+            <li>📱 Daily mindfulness practices</li>
           </ul>
-          <p>These techniques are tailored to help users reduce stress and enhance well-being.</p>
           <a href="https://github.com/noeliarozado/EmocionaAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
+
         <div class="project-card">
-          <img class="smartwatch-img" src="images/smartwatch-1.png" alt="Smartwatch App preview" />
+          <img src="images/smartwatch.png" alt="Smartwatch App Screenshot" />
           <h3>⌚ Smartwatch App</h3>
           <p>A smartwatch app designed to track and display health and fitness data in real time. The app offers users insights into their steps, calories burned, and key health metrics such as heart rate, blood pressure, and oxygen saturation. By displaying the current values as well as the highest and lowest readings of the day, users can easily monitor their health status. Additionally, the app integrates location tracking, allowing users to view their current location on a map.</p>
           <a href="https://github.com/noeliarozado/SmartwatchAppREADME" target="_blank">🔗 View on GitHub</a>
         </div>
+
         <div class="project-card">
-          <img class="fortune-smash-img" src="images/fortune-smash-cover.png" alt="Fortune Smash cover" />
+          <img src="images/fortune-smash.png" alt="Fortune Smash Game Cover" />
           <h3>🥠 Fortune Smash</h3>
-          <p>This collaborative game jam project involves smashing magical cookies to reveal fortunes. Built in a team, it emphasizes creativity and quick prototyping, with positive feedback from players for its whimsical art and fun gameplay.</p>
-          <p>Fortune Smash was well received for its creativity and fast-paced design, highlighting the importance of collaboration in a game jam environment. It’s a great example of turning an idea into a playable experience within a short timeframe.</p>
+          <p>Fortune Smash is an arcade-style game jam project created as a collaborative effort during a game jam. Players smash magical cookies to reveal fortunes. The game received positive feedback for its creativity and fun gameplay. It's a perfect example of fast prototyping and rapid collaboration.</p>
           <a href="https://apiratehat.itch.io/fortune-smash" target="_blank">🔗 Play on Itch.io</a>
         </div>
+
       </div>
     </section>
-    <section id="skills">
+
+    <section id="skills" class="skills">
       <h2>Skills</h2>
-      <h3>Technical Skills</h3>
-      <ul class="skills">
+      <ul>
         <li>Java</li>
         <li>Kotlin</li>
         <li>Android Studio</li>
         <li>MySQL</li>
         <li>HTML & CSS</li>
         <li>Git & GitHub</li>
-      </ul>
-      <h3>Soft Skills</h3>
-      <ul class="skills">
-        <li>Teamwork</li>
-        <li>Client-oriented</li>
-        <li>Problem Solving</li>
+        <li>UX thinking</li>
         <li>Empathy</li>
-        <li>Fluent in English 🇬🇧</li>
-      </ul>
-      <h3>Languages</h3>
-      <ul class="languages">
-        <li>Spanish 🇪🇸</li>
-        <li>English 🇬🇧</li>
+        <li>Fluent English 🇬🇧</li>
+        <li>Spanish Native 🇪🇸</li>
       </ul>
     </section>
+
     <section id="cv" class="cv-section">
       <a href="Noelia_Rozado_CV.pdf" target="_blank">Download CV</a>
     </section>
   </div>
+
+  <footer>
+    © 2024 Noelia Rozado • All rights reserved
+  </footer>
 </body>
 </html>
+
 
