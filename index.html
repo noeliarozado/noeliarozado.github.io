@@ -1,10 +1,12 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Noelia Rozado | Developer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,10 +16,11 @@
     }
 
     body {
-      font-family: 'Quicksand', sans-serif;
-      background-color: #f5f5f5;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f0f0;
       color: #333;
       line-height: 1.6;
+      font-size: 1.05rem;
     }
 
     header {
@@ -68,11 +71,11 @@
     }
 
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 1.5rem;
       color: #004d6b;
       border-bottom: 3px solid #0077cc;
@@ -81,13 +84,14 @@
 
     #about p {
       text-align: justify;
-      font-size: 1.05rem;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     .about-icons {
       text-align: center;
-      margin-top: 1.5rem;
-      font-size: 1.5rem;
+      margin-top: 2rem;
+      font-size: 2rem;
       color: #004d6b;
     }
 
@@ -95,7 +99,7 @@
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      gap: 3rem;
     }
 
     .project-card {
@@ -109,8 +113,8 @@
     }
 
     .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     }
 
     .project-card h3 {
@@ -143,7 +147,7 @@
       text-align: center;
       background-color: #0077cc;
       color: white;
-      padding: 0.5rem 1.2rem;
+      padding: 0.8rem 1.5rem;
       border-radius: 20px;
       font-size: 0.95rem;
       font-weight: 500;
@@ -226,10 +230,17 @@
         text-align: center;
       }
 
-      .skills-category h3,
-      .skills li {
+      .skills-category h3, .skills li {
         text-align: center;
         margin: 0 auto;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      .project-card {
+        margin-bottom: 2rem;
       }
     }
   </style>
@@ -278,7 +289,7 @@
         </div>
 
         <div class="project-card">
-          <h3>⌚ HealthPulse</h3>
+          <h3>⌚ VitaPulse</h3>
           <img src="images/smartwatch.png" alt="Smartwatch App">
           <p>A smartwatch app built with Ionic to track steps, calories, heart rate, oxygen saturation, and location. Real-time data and daily min/max summaries help users monitor their health at a glance, with a clean UI focused on simplicity and daily usability.</p>
           <div class="card-button">
@@ -298,38 +309,41 @@
       </div>
     </section>
 
-    <section id="skills" class="skills">
-      <h2>🧰 Skills</h2>
+    <section id="skills">
+      <h2>🛠️ Skills</h2>
       <div class="skills-categories">
         <div class="skills-category">
-          <h3>🛠️ Technical Skills</h3>
+          <h3>Programming Languages</h3>
           <ul>
             <li>Java</li>
-            <li>Kotlin</li>
+            <li>JavaScript</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Python</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+
+        <div class="skills-category">
+          <h3>Tools & Frameworks</h3>
+          <ul>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>Vue.js</li>
+            <li>Git/GitHub</li>
             <li>Android Studio</li>
-            <li>MySQL</li>
-            <li>HTML & CSS</li>
-            <li>Git & GitHub</li>
-            <li>Firebase</li>
-            <li>Flutter</li>
           </ul>
         </div>
 
         <div class="skills-category">
-          <h3>💬 Soft Skills</h3>
+          <h3>Other Skills</h3>
           <ul>
-            <li>Collaboration</li>
+            <li>Agile</li>
+            <li>UI/UX Design</li>
             <li>Problem Solving</li>
-            <li>Adaptability</li>
-            <li>Communication</li>
-          </ul>
-        </div>
-
-        <div class="skills-category">
-          <h3>🌍 Languages</h3>
-          <ul>
-            <li>Spanish - Native</li>
-            <li>English - B2</li>
+            <li>Collaboration</li>
+            <li>Teaching & Mentoring</li>
           </ul>
         </div>
       </div>
@@ -337,20 +351,20 @@
 
     <section id="cv">
       <h2>📄 CV</h2>
-      <p>You can view or download my resume here: <a href="path_to_your_cv.pdf" target="_blank">🔗 View CV</a></p>
+      <p>You can download my full CV in PDF format below.</p>
+      <p><a href="path_to_your_cv.pdf" download="Noelia_Rozado_CV">Download CV</a></p>
     </section>
 
     <section id="contact">
       <h2>📬 Contact</h2>
-      <p>Email: your-email@example.com</p>
-      <p>GitHub: <a href="https://github.com/noeliarozado" target="_blank">noeliarozado</a></p>
+      <p>Feel free to reach out to me through email or via my social profiles!</p>
+      <p><a href="mailto:noelia@example.com">Email me</a></p>
     </section>
   </div>
 
   <footer>
-    <p>&copy; 2025 Noelia Rozado | All Rights Reserved</p>
+    <p>Created by Noelia Rozado | All rights reserved</p>
   </footer>
-
 </body>
 </html>
 
